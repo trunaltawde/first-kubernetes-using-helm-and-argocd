@@ -1,0 +1,8 @@
+# 1 control-plane + 3 workers: enough nodes that draining one still leaves room to reschedule pods
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+  - role: worker

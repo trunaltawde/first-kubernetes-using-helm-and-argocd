@@ -1,0 +1,4 @@
+etcd-snapshot.db
+restored/
+*.db
+.DS_Store

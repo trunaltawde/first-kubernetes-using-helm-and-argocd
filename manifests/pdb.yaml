@@ -1,0 +1,11 @@
+# PodDisruptionBudget: during a drain, at least 2 guestbook pods must stay available
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: guestbook-pdb
+  namespace: guestbook
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: helm-guestbook
